@@ -1,13 +1,15 @@
 .top-page{
-    background-image: url(../img/plant.jpg);
+    background-image: url(../img/yellow.jpg);
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
+    background-position: center center;
     background-size: cover;
     background-repeat: none;
 }
 
 header{
-    background-color: rgb(250, 250, 250,0.2);
+    background-color: rgba(255,255,255,0.3);
     /* background-image: url(../img/plant.jpg); */
     height: 20px;
     padding: 14px 40px;
@@ -19,8 +21,9 @@ header{
 .nav{
     display: flex;
     justify-content: flex-end;
+    font-family: 'Kaushan Script', cursive;
     /* align-items: center; */
-    /* font-size: 30px; */
+    font-size: 20px;
     /* color: tomato;  */
 }
 
@@ -29,14 +32,10 @@ header{
     /* justify-content: left; */
     text-decoration: none;
     margin-left: 40px;
-    color:rgb(29, 197, 29)
+    color:gray
 }
 
 .name{    
-    /* background-image: url(../img/plant.jpg);
-    background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* height: 100vh; */
     color: white;
     font-weight: bold;
     display: flex;
@@ -45,6 +44,12 @@ header{
     align-items: center;
     font-size: 50px;
     margin-top: 80px;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#photo{
+    margin-top: 70px;
 }
 
 .guideline{
@@ -55,29 +60,42 @@ header{
     margin: 20px;
 }
 
+#concept{
+    background-color:rgb(94, 57, 3, 0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Shippori Mincho', serif;
+    /* display: flex; */
+    padding: 20px;
+    margin: 50px;
+}
+
 #concept > h2,
-#food > h2,
-#drink > h2{
+#bouquet > h2,
+#accessories > h2{
     font-size: 40px;
     font-weight: bold;
-    color: gray;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin: 50px auto; */
-    margin-top: 50px;
+    margin: 50px auto;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
     margin-left: auto;
     margin-right: auto;
+    font-family: 'DM Serif Display', serif;
+font-family: 'Kaushan Script', cursive;
 }
 
 .contents{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px auto;
-    font-size: 20px;
-    text-align: left;
+    margin: 50px 50px;
+    font-size: 25px;
+    /* text-align: center; */
 }
 
 .contents-scoreimage {
@@ -86,7 +104,98 @@ header{
 }
 
 .discription{
-    width: 50%;
+    width: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+  #bouquet{
+    /* background-color:  rgba(88, 110, 36, 0.2); */
+    background-image: url(../img/sky.jpg);
+    background-repeat: none;
+    margin: 50px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+  .bouquet-image {
+
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .flexitem {
+    flex: 0 0 24%;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:black;
+    font-family: 'Andada Pro', serif;
+  }
+  .flexitem img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    /* text-align: center; */
+  }
+
+#accessories{
+    /* background-color:rgb(94, 57, 3, 0.2); */
+    background-image: url(../img/pink.jpg);
+    margin: 50px;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.accessories-image {
+
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .flexitem {
+    flex: 0 0 24%;
+  }
+  .flexitem img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    /* text-align: center; */
+  }
+
+.bouquet-font{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.bouquet-item{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    /* text-align: center; */
+}
+
+.info{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.information{
+    text-align: center;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    margin: 30px;
+    border:2px rgba(88, 110, 36, 0.2) solid;
+    border-width: 40px;
+    padding: 20px;
 }
 
 footer{
@@ -94,7 +203,7 @@ footer{
     justify-content: center;
     align-items: center;
     height: 100px;
-    background-color: khaki;
+    background-color:rgba(88, 110, 36, 0.2);
 }
 
 .map-font{
@@ -106,4 +215,5 @@ footer{
 
 .map{
     text-align: center;
+    margin-bottom: 100px;
 }

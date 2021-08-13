@@ -7,75 +7,152 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap" rel="stylesheet">
+
+<style type="text/css">
+    #photo {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #photo img {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    </style>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        var setImg = '#photo';
+        var fadeSpeed = 1600;
+        var switchDelay = 5000;
+    
+        $(setImg).children('img').css({opacity:'0'});
+        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    
+        setInterval(function(){
+            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        },switchDelay);
+    });
+    </script>
+    
 </head>
 
 <body>
     <div class="top-page">
+
         <header>
             <div class="header-right">
                 <ul class="nav">
-                    <!-- <li>Vegan Ramen Cafe</li> -->
                     <li><a href="#concept">Concept</a></li>
-                    <li><a href="#food">Food</a></li>
-                    <li><a href="#drink">Drink</a></li>
+                    <li><a href="#bouquet">Bouquet</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#Map">Map</a></li>
                 </ul>
             </div>
     </header>
+
         <div class="name">
-            <h1>Vegan Cheese Cafe</Breaks></h1>
+            <h1>Loss Flower Store</h1>
         </div>
+
+        <div id="photo">
+            <img src="./assets/img/flower girl 2.jpg" alt="">
+            <img src="./assets/img/flower shop.jpg" alt="">
+            <img src="./assets/img/flower girl.jpg"  alt="">
+            </div>
     </div>
 
 <main>
-    <!-- section1 -->
-    <!-- <section class="name">
-            <ul class="guideline">
-                <li>ヴィーガン</li>
-                <li>チーズカフェ</li>
-            </ul>
-        </section> -->
 
-    <!-- section2 -->
     <section id="concept">
-        
             <h2>Concept</h2>
             <div class="contents">
                 <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor delectus alias impedit expedita tempora ipsam laboriosam rem amet, minus dicta iusto fugiat accusamus aut quisquam inventore autem repellat, distinctio repellendus?
+                    まだ美しいのに捨てられてしまう花がたくさんあることを知っていますか？これらをロスフラワーといいます。コロナ渦で式典などのイベントが減ったこともあり、ロスフラワー問題は深刻化しています。<br>Loss Flower Shopではこれらの花に第二の人生を与え、ロスフラワーの削減を目指しています。
                 </p>
-                <img class="contents-scoreimage" src="./assets/img/concept.jpg" alt="concept">
+                <img class="contents-scoreimage" src="./assets/img/loss flower.jpg" alt="concept">
             </div>
     </section>
 
-    <section id="food">
-        <h2>Food</h2>
-        <div class="contents">
-            <img class="contents-scoreimage" src="./assets/img/concept.jpg" alt="food">
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor delectus alias impedit expedita tempora ipsam laboriosam rem amet, minus dicta iusto fugiat accusamus aut quisquam inventore autem repellat, distinctio repellendus?
-                </p>
+    <section id="bouquet">
+        <h2>bouquet</h2>
 
-        </div>
+        <div class="bouquet-image">
+            <div class="flexitem">
+              <img src="./assets/img/bouquet white.jpg" alt="サンプル画像">
+              <p>white bouquet</p>
+
+            </div>
+              <div class="flexitem">
+              <img src="./assets/img/rose bouquet.jpg" alt="サンプル画像">
+              <p>pink bouquet</p>
+
+            </div>
+              <div class="flexitem">
+              <img src="./assets/img/dry bouquet.jpg" alt="サンプル画像">
+              <p>dry bouquet</p>
+          </div>
+
     </section>
 
-        <section id="drink">
-            <h2>Drink</h2>
-            <div class="contents">
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor delectus alias impedit expedita tempora ipsam laboriosam rem amet, minus dicta iusto fugiat accusamus aut quisquam inventore autem repellat, distinctio repellendus?
-                </p>
-                <img class="contents-scoreimage" src="./assets/img/concept.jpg" alt="drink">
-            </div>
+        <section id="accessories">
+            <h2>accessories</h2>
+            <div class="accessories-image">
+                <div class="flexitem">
+                  <img src="./assets/img/hana kannmuri.jpg" alt="サンプル画像">
+                  <p>corolla</p>
+    
+                </div>
+                  <div class="flexitem">
+                  <img src="./assets/img/flower acce.jpg" alt="サンプル画像">
+                  <p>bracelet</p>
+    
+                </div>
+                  <div class="flexitem">
+                  <img src="./assets/img/flower earring.jpg" alt="サンプル画像">
+                  <p>earring</p>
+    
+              </div>
         </section>
 
+    <section class="information">
+        <h2 class="info">Information</h2>
+        <ul>
+            <li>2021/〇/〇　東京オリンピックの表彰式用ひまわりを提供しました！</li>
+            <li>2020/〇/〇　星野源さんと新垣結衣さんの結婚式にお花を提供しました！</li>
+            <li>2020/〇/〇　エコ大賞を受賞しました！</li>
+            <li>2020/〇/〇　Grand Open!</li>
+        </ul>
+    </section>
+
+    <section id="Map">
         <h2 class="map-font">MAP</h2>
 
     <div class="map">    
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.25709360358!2d12.39591247526213!3d41.91024148793495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2z44Kk44K_44Oq44KiIOODreODvOODnuecjCDjg63jg7zjg54!5e0!3m2!1sja!2sjp!4v1628685674637!5m2!1sja!2sjp" width="300" height="250" style="border:0;" allowfullscreen="100" loading="lazy"></iframe></div>
 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190028.25709360358!2d12.39591247526213!3d41.91024148793495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2z44Kk44K_44Oq44KiIOODreODvOODnuecjCDjg63jg7zjg54!5e0!3m2!1sja!2sjp!4v1628685674637!5m2!1sja!2sjp" width="300" height="250" style="border:0;" allowfullscreen="100" loading="lazy"></iframe></div>
+    </section>
 </main>
+
     <footer>
-        <div>Copyright © Vegan Cheese Cafe</div>
+        <div>Copyright © Loss Flower Store</div>
     </footer>
     
 </body>
